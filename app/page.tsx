@@ -4,6 +4,7 @@ import Introduction from "@/components/Introduction";
 import ServicesGrid from "@/components/ServicesGrid";
 import Testimonials from "@/components/Testimonials";
 import Recruitment from "@/components/Recruitment"; // <--- Import
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesGrid />
       <Testimonials />
       <Recruitment /> {/* <--- Add here */}
+      <Footer /> 
     </main>
   );
 }
