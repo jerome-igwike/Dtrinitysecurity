@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { Shield, Home, Users, Lock, Car, Eye, ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
@@ -46,7 +45,6 @@ const services = [
 export default function Services() {
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
 
       {/* Header - Simple & Clean */}
       <div className="pt-32 pb-16 text-center px-4 bg-gray-50 border-b border-gray-100">
@@ -65,8 +63,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="group bg-white border border-gray-200 p-8 hover:border-burgundy-900/50 hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 rounded-sm"
             >
               <div className="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-burgundy-900 group-hover:text-white transition-colors duration-300">
@@ -75,7 +73,7 @@ export default function Services() {
                   {service.icon}
                 </div>
               </div>
-              
+
               <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 {service.description}

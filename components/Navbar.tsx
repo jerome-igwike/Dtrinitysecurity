@@ -1,37 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, ShieldCheck } from "lucide-react";
+import { useState } from "react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { Menu, X, ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  
+
   const pathname = usePathname();
   const isHome = pathname === "/";
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 10);
+  });
 
   const showBackground = !isHome || scrolled || isOpen;
 
   const navItems = [
     { name: "Home", href: "/" },
-    { 
-      name: "About", 
+    {
+      name: "About",
       dropdown: [
-        { name: "About The Firm", href: "/about" }, 
+        { name: "About The Firm", href: "/about" },
         { name: "Recruitment", href: "/recruitment" }
-      ] 
+      ]
     },
-    { 
-      name: "Services", 
+    {
+      name: "Services",
       dropdown: [
         { name: "Close Protection", href: "/services/close-protection" },
         { name: "Residential Security", href: "/services/residential" },
@@ -39,14 +40,14 @@ export default function Navbar() {
         { name: "Private Investigation", href: "/services/investigation" },
         { name: "Surveillance", href: "/services/surveillance" },
         { name: "Security Chauffeurs", href: "/services/chauffeurs" }
-      ] 
+      ]
     },
-    { 
-      name: "Articles", 
+    {
+      name: "Articles",
       dropdown: [
-        { name: "Security Briefings", href: "/articles" }, 
-        { name: "Press & Media", href: "/news" } 
-      ] 
+        { name: "Security Briefings", href: "/articles" },
+        { name: "Press & Media", href: "/news" }
+      ]
     },
     { name: "Contact", href: "/contact" },
   ];
@@ -54,36 +55,32 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full">
       <nav
-        className={`w-full transition-all duration-500 ease-in-out ${
-          showBackground
-            ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100 py-3"
-            : "bg-transparent py-4"
-        }`}
+        className={`w-full transition-all duration-500 ease-in-out ${showBackground
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100 py-3"
+          : "bg-transparent py-4"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          
+
           {/* LOGO */}
-          <Link href="/" className="flex items-center gap-2 group z-50">
-            <div className={`transition-colors duration-300 ${showBackground ? "text-[#881337]" : "text-white"}`}>
-                <ShieldCheck className="h-7 w-7" />
+          <Link href="/" className="flex items-center gap-3 group z-50">
+            <div className={`transition-all duration-300 hover:opacity-80 ${!showBackground ? "brightness-0 invert" : "brightness-0"}`}>
+              <Image src="/no-bg-logo.png" alt="D Trinity Logo" width={180} height={50} className="object-contain" priority />
             </div>
-            <span className={`font-serif text-lg font-bold tracking-wide transition-colors duration-300 ${showBackground ? "text-gray-900" : "text-white"}`}>
-              D TRINITY
-            </span>
           </Link>
 
           {/* DESKTOP NAV */}
           <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
-              <div 
-                key={item.name} 
+              <div
+                key={item.name}
                 className="relative group h-full"
                 onMouseEnter={() => setActiveDropdown(item.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <div className="py-2">
                   {item.dropdown ? (
-                    <button 
+                    <button
                       className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.15em] transition-colors
                       ${showBackground ? "text-gray-700 hover:text-[#881337]" : "text-white/90 hover:text-white"}`}
                     >
@@ -126,9 +123,9 @@ export default function Navbar() {
             <Link
               href="/contact"
               className={`px-5 py-2.5 font-bold text-[10px] tracking-[0.2em] uppercase rounded-sm transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5
-              ${showBackground 
-                ? "bg-[#881337] hover:bg-[#4C0519] text-white" 
-                : "bg-white text-[#881337] hover:bg-gray-50"}`}
+              ${showBackground
+                  ? "bg-[#881337] hover:bg-[#4C0519] text-white"
+                  : "bg-white text-[#881337] hover:bg-gray-50"}`}
             >
               Contact Us
             </Link>
@@ -136,8 +133,8 @@ export default function Navbar() {
 
           {/* MOBILE TOGGLE */}
           <div className="lg:hidden z-50">
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
+            <button
+              onClick={() => setIsOpen(!isOpen)}
               className={`p-1 transition-colors ${showBackground ? "text-gray-900" : "text-white"}`}
             >
               {isOpen ? <X size={24} className="text-gray-900" /> : <Menu size={24} />}

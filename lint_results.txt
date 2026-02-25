@@ -1,0 +1,40 @@
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\about\page.tsx[24m[0m
+[0m  [2m3:44[22m  [33mwarning[39m  'ChevronRight' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\api\contact\route.ts[24m[0m
+[0m  [2m39:19[22m  [31merror[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\api\recruitment\route.ts[24m[0m
+[0m  [2m69:19[22m  [31merror[39m  Unexpected any. Specify a different type  [2m@typescript-eslint/no-explicit-any[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\articles\[slug]\page.tsx[24m[0m
+[0m    [2m5:17[22m   [33mwarning[39m  'User' is defined but never used                                 [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m   [2m30:28[22m   [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m30:38[22m   [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m34:61[22m   [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m34:70[22m   [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m34:127[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m57:214[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m57:225[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m57:272[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m97:28[22m   [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m97:166[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m   [2m97:183[22m  [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m  [2m116:17[22m   [31merror[39m    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\articles\page.tsx[24m[0m
+[0m  [2m3:20[22m  [33mwarning[39m  'Clock' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\news\[slug]\page.tsx[24m[0m
+[0m  [2m87:223[22m  [31merror[39m  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  [2mreact/no-unescaped-entities[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\app\testimonials\page.tsx[24m[0m
+[0m  [2m4:36[22m  [33mwarning[39m  'Lock' is defined but never used   [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m  [2m5:8[22m   [33mwarning[39m  'Image' is defined but never used  [2m@typescript-eslint/no-unused-vars[22m[0m
+[0m[0m
+[0m[4mC:\Users\Jerome Igwike\d-trinity-security\components\Recruitment.tsx[24m[0m
+[0m  [2m20:9[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[31m[1m✖ 21 problems (15 errors, 6 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[0m

@@ -1,11 +1,6 @@
-"use client";
-
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Calendar, ArrowLeft, Printer, Share2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 
 // 1. PRESS RELEASE DATABASE
 const newsData: Record<string, {
@@ -32,7 +27,7 @@ const newsData: Record<string, {
           The new hub will serve as a gateway for operations across the Gulf Cooperation Council (GCC) countries, providing seamless security continuity for clients travelling between London and the Middle East.
         </p>
         <blockquote className="border-l-4 border-[#881337] pl-6 my-8 italic text-gray-700 font-serif text-lg">
-          "The security landscape in the Middle East is evolving. Our clients require more than just manpower; they require intelligence-led risk management that operates across borders. Dubai is the natural next step for D Trinity."
+          &quot;The security landscape in the Middle East is evolving. Our clients require more than just manpower; they require intelligence-led risk management that operates across borders. Dubai is the natural next step for D Trinity.&quot;
           <footer className="text-sm font-bold text-gray-900 mt-2 not-italic">— Tobenna Arthur, CEO</footer>
         </blockquote>
         <p>
@@ -71,7 +66,7 @@ const newsData: Record<string, {
           In a recent interview with <em>The Times</em>, D Trinity CEO Tobenna Arthur discussed the sharp rise in violent watch thefts across Mayfair and Chelsea. He highlighted the sophisticated spotting techniques used by organized gangs and offered advice to UHNW individuals.
         </p>
         <p className="mb-6">
-          "The attackers are often aware of the watch's value before the victim even leaves the restaurant," Arthur noted. "We advise clients to utilize secure transport for door-to-door movements and to avoid displaying high-value assets in unsecured public spaces."
+          &quot;The attackers are often aware of the watch&apos;s value before the victim even leaves the restaurant,&quot; Arthur noted. &quot;We advise clients to utilize secure transport for door-to-door movements and to avoid displaying high-value assets in unsecured public spaces.&quot;
         </p>
       </>
     )
@@ -86,88 +81,85 @@ const newsData: Record<string, {
       <>
         <p className="font-bold text-gray-900 mb-6">FOR IMMEDIATE RELEASE</p>
         <p className="mb-6">
-          <strong>LONDON, UK</strong> — D Trinity Security is proud to announce it has been awarded ISO 9001 (Quality Management) and ISO 14001 (Environmental Management) certifications. This milestone underscores the firm's commitment to operational excellence.
+          <strong>LONDON, UK</strong> — D Trinity Security is proud to announce it has been awarded ISO 9001 (Quality Management) and ISO 14001 (Environmental Management) certifications. This milestone underscores the firm&apos;s commitment to operational excellence.
         </p>
         <p className="mb-6">
-          "This is not just a badge," said Jerome Igwike, Director of Operations. "It is proof that our internal processes meet the highest international standards, giving our corporate clients total peace of mind."
+          &quot;This is not just a badge,&quot; said Jerome Igwike, Director of Operations. &quot;It is proof that our internal processes meet the highest international standards, giving our corporate clients total peace of mind.&quot;
         </p>
       </>
     )
   }
 };
 
-export default function PressReleasePage() {
-  const params = useParams();
-  const slug = params?.slug as string;
+export default async function PressReleasePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const data = newsData[slug];
 
   if (!data) {
     return (
       <div className="min-h-screen pt-32 text-center bg-white flex flex-col items-center justify-center">
-        <Navbar />
-         <h1 className="text-2xl font-serif text-gray-900 mb-2">Press Release Not Found</h1>
-         <Link href="/news" className="mt-4 px-6 py-3 bg-[#0a0a0a] text-white font-bold uppercase tracking-widest text-xs rounded-sm">
-           Return to Newsroom
-         </Link>
+
+        <h1 className="text-2xl font-serif text-gray-900 mb-2">Press Release Not Found</h1>
+        <Link href="/news" className="mt-4 px-6 py-3 bg-[#0a0a0a] text-white font-bold uppercase tracking-widest text-xs rounded-sm">
+          Return to Newsroom
+        </Link>
       </div>
     );
   }
 
   return (
     <main className="bg-white min-h-screen">
-      <Navbar />
 
       {/* HEADER IMAGE */}
       <div className="relative h-[40vh] w-full">
-         <Image src={data.image} alt={data.title} fill className="object-cover" priority />
-         <div className="absolute inset-0 bg-black/50"></div>
-         <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-white font-serif text-3xl md:text-5xl max-w-4xl text-center px-6 leading-tight">
-               {data.title}
-            </h1>
-         </div>
+        <Image src={data.image} alt={data.title} fill className="object-cover w-full h-full" priority />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-white font-serif text-3xl md:text-5xl max-w-4xl text-center px-6 leading-tight">
+            {data.title}
+          </h1>
+        </div>
       </div>
 
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto">
-           
-           {/* META DATA */}
-           <div className="flex items-center justify-between border-b border-gray-200 pb-6 mb-8">
-              <Link href="/news" className="flex items-center text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-[#881337] transition-colors">
-                 <ArrowLeft className="w-3 h-3 mr-2" /> Back to News
-              </Link>
-              <div className="flex gap-4">
-                 <button className="text-gray-400 hover:text-black"><Printer className="w-4 h-4" /></button>
-                 <button className="text-gray-400 hover:text-black"><Share2 className="w-4 h-4" /></button>
-              </div>
-           </div>
 
-           <div className="mb-8 flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-gray-500">
-              <span className="text-[#881337]">{data.location}</span>
-              <span>•</span>
-              <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {data.date}</span>
-           </div>
+          {/* META DATA */}
+          <div className="flex items-center justify-between border-b border-gray-200 pb-6 mb-8">
+            <Link href="/news" className="flex items-center text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-[#881337] transition-colors">
+              <ArrowLeft className="w-3 h-3 mr-2" /> Back to News
+            </Link>
+            <div className="flex gap-4">
+              <button className="text-gray-400 hover:text-black"><Printer className="w-4 h-4" /></button>
+              <button className="text-gray-400 hover:text-black"><Share2 className="w-4 h-4" /></button>
+            </div>
+          </div>
 
-           {/* CONTENT */}
-           <div className="prose prose-lg text-gray-700 leading-loose">
-              {data.content}
-           </div>
+          <div className="mb-8 flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-gray-500">
+            <span className="text-[#881337]">{data.location}</span>
+            <span>•</span>
+            <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {data.date}</span>
+          </div>
 
-           {/* BOILERPLATE */}
-           <div className="mt-16 bg-gray-50 p-8 border-t-4 border-[#881337]">
-              <h4 className="font-bold text-gray-900 text-sm uppercase tracking-widest mb-4">About D Trinity Security</h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                 D Trinity Security is a London-based private security firm specializing in intelligence-led protection for UHNW individuals, Family Offices, and sovereign entities. Founded by former UK military and intelligence veterans, the firm provides bespoke risk management solutions globally.
-              </p>
-              <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500">
-                 <strong>Media Contact:</strong> press@dtrinitysecurity.co | +44 (0) 20 7000 0000
-              </div>
-           </div>
+          {/* CONTENT */}
+          <div className="prose prose-lg text-gray-700 leading-loose">
+            {data.content}
+          </div>
+
+          {/* BOILERPLATE */}
+          <div className="mt-16 bg-gray-50 p-8 border-t-4 border-[#881337]">
+            <h4 className="font-bold text-gray-900 text-sm uppercase tracking-widest mb-4">About D Trinity Security</h4>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              D Trinity Security is a London-based private security firm specializing in intelligence-led protection for UHNW individuals, Family Offices, and sovereign entities. Founded by former UK military and intelligence veterans, the firm provides bespoke risk management solutions globally.
+            </p>
+            <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500">
+              <strong>Media Contact:</strong> press@dtrinitysecurity.co | +44 (0) 20 7000 0000
+            </div>
+          </div>
 
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

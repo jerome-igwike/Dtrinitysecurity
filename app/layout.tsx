@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 // Load fonts
@@ -29,9 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${lato.variable} font-sans antialiased bg-white text-gray-900`}>
-        {/* WE REMOVED <Navbar /> and <Footer /> HERE to prevent duplication. 
-            They are now rendered in the individual pages. */}
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
