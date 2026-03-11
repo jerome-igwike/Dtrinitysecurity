@@ -24,8 +24,8 @@ const services = [
     title: "Surveillance",
     description: "Gathering intelligence and evidence with absolute discretion. Corporate due diligence and private matters handled sensitively.",
     icon: <Eye className="w-5 h-5" />,
-    // High-tech camera lens/surveillance vibe
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop",
+    // High-tech security camera (explicit security)
+    image: "https://images.unsplash.com/photo-1555529733-0e670560f8e1?q=80&w=2070&auto=format&fit=crop",
     link: "/services/investigation"
   },
   {
@@ -40,16 +40,16 @@ const services = [
     title: "Event Security",
     description: "High-profile event management, crowd control, and VIP extraction planning.",
     icon: <Users className="w-5 h-5" />,
-    // Dark, VIP event hall/stage vibe
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070&auto=format&fit=crop",
+    // Security guard/Event
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop",
     link: "/services/events"
   },
   {
     title: "Asset Protection",
     description: "Secure transit and storage for high-value items, fine art, and sensitive documents.",
     icon: <Lock className="w-5 h-5" />,
-    // Secure heavy metal vault/lock mechanism
-    image: "https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=2071&auto=format&fit=crop",
+    // Secure heavy metal vault/lock mechanism (explicit security)
+    image: "https://images.unsplash.com/photo-1627037558428-bc84931a7749?q=80&w=2071&auto=format&fit=crop",
     link: "/services/assets"
   }
 ];
@@ -61,13 +61,13 @@ export default function ServicesGrid() {
 
         {/* Section Header */}
         <FadeIn direction="up" delay={0.2} className="text-center mb-12 md:mb-16">
-          <span className="block text-[#881337] font-bold tracking-[0.2em] uppercase text-xs mb-3 md:mb-4">
+          <span className="block text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs mb-3 md:mb-4">
             Our Expertise
           </span>
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-gray-900 leading-none">
             Bespoke Protection.
           </h2>
-          <div className="w-16 md:w-24 h-1 bg-[#881337] mx-auto mt-6 md:mt-8"></div>
+          <div className="w-16 md:w-24 h-1 bg-[#D4AF37] mx-auto mt-6 md:mt-8"></div>
         </FadeIn>
 
         {/* The Cinematic Grid */}
@@ -103,7 +103,7 @@ export default function ServicesGrid() {
 
                   {/* Icon Badge */}
                   <div className="mb-3 transform translate-y-0 transition-transform duration-500 md:group-hover:-translate-y-2">
-                    <div className="inline-flex items-center justify-center p-2.5 md:p-3 bg-[#881337] text-white rounded-sm shadow-lg backdrop-blur-sm">
+                    <div className="inline-flex items-center justify-center p-2.5 md:p-3 bg-[#D4AF37] text-white rounded-sm shadow-lg backdrop-blur-sm">
                       {service.icon}
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export default function ServicesGrid() {
 
                   {/* Desktop Description */}
                   <div className="hidden md:block overflow-hidden max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out">
-                    <p className="text-gray-300 font-light text-sm leading-relaxed mb-6 border-l-2 border-[#881337] pl-4">
+                    <p className="text-gray-300 font-light text-sm leading-relaxed mb-6 border-l-2 border-[#D4AF37] pl-4">
                       {service.description}
                     </p>
                   </div>
@@ -123,7 +123,7 @@ export default function ServicesGrid() {
                   {/* "Explore" Indicator */}
                   <div className="flex items-center gap-2 mt-1">
                     <span className="md:hidden text-[10px] font-bold uppercase tracking-widest text-white/80 flex items-center gap-2">
-                      View Service <ArrowRight className="w-3 h-3 text-[#881337]" />
+                      View Service <ArrowRight className="w-3 h-3 text-[#D4AF37]" />
                     </span>
 
                     <span className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/80 group-hover:text-white transition-colors">
@@ -146,7 +146,7 @@ export default function ServicesGrid() {
         <FadeIn direction="up" delay={0.6} className="mt-16 text-center px-4">
           <Link
             href="/contact"
-            className="w-full md:w-auto inline-flex items-center justify-center px-12 py-5 bg-[#881337] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#4C0519] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+            className="w-full md:w-auto inline-flex items-center justify-center px-12 py-5 bg-[#D4AF37] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#B5952F] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
           >
             Request Full Service List
           </Link>

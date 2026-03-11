@@ -14,13 +14,10 @@ export default function Recruitment() {
       */}
       <div className="relative w-full h-[500px] lg:h-auto lg:w-1/2 bg-gray-900 overflow-hidden group">
 
-        {/* THE LOCAL IMAGE
-            - src="/recruitment-bg.jpg": Looks for the file in your public folder.
-            - grayscale contrast-125: Applies the 'Ops' look automatically.
-        */}
+        {/* THE LOCAL IMAGE -> Upgraded to High-Res Unsplash Corporate Detail */ }
         <Image
-          src="/recruitment-bg.jpg"
-          alt="Specialist Security Unit"
+          src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop"
+          alt="Elite Protection Operatives"
           fill
           className="object-cover object-center opacity-80 grayscale contrast-125 transition-transform duration-[3s] group-hover:scale-105"
         />
@@ -29,12 +26,12 @@ export default function Recruitment() {
         {/* 1. Dark Fade from Bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
         {/* 2. Burgundy Tint (Branding) */}
-        <div className="absolute inset-0 bg-[#881337]/10 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[#D4AF37]/10 mix-blend-overlay" />
 
         {/* FLOATING DOSSIER BADGE */}
         <div className="absolute bottom-8 left-8 max-w-xs bg-black/60 backdrop-blur-md border border-white/10 p-6 rounded-sm z-20 animate-fade-in-up">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-[#881337] rounded-sm shadow-lg border border-white/10">
+            <div className="p-3 bg-[#D4AF37] rounded-sm shadow-lg border border-white/10">
               <ShieldAlert className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -54,29 +51,29 @@ export default function Recruitment() {
       <div className="w-full lg:w-1/2 lg:min-h-[700px] flex flex-col justify-center px-8 py-20 lg:p-24 bg-white">
 
         <div className="max-w-xl mx-auto lg:mx-0">
-          <span className="flex items-center gap-2 text-[#881337] font-bold tracking-[0.2em] uppercase text-xs mb-6">
-            <span className="w-8 h-[2px] bg-[#881337]"></span>
+          <span className="flex items-center gap-2 text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs mb-6">
+            <span className="w-8 h-[2px] bg-[#D4AF37]"></span>
             Join The Elite
           </span>
 
-          <h2 className="font-serif text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-[1.1]">
+          <h2 className="font-serif text-4xl md:text-6xl font-bold text-gray-400 mb-8 leading-[1.1]">
             We Don&apos;t Hire Guards. <br />
-            <span className="text-gray-400">We Select Operators.</span>
+            <span className="text-gray-900">We Select Professionals.</span>
           </h2>
 
-          <p className="text-gray-600 text-lg font-light leading-relaxed mb-10 border-l-4 border-[#881337] pl-6">
-            D Trinity is not a volume employer. We operate a stringent selection process, seeking individuals with exemplary service records in the British Military, Police, or Specialist Intelligence Services.
+          <p className="text-gray-600 text-lg font-light leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6">
+            D Trinity is not a volume employer. We operate a stringent selection process, seeking individuals with exemplary service records in elite security sectors, law enforcement, or corporate protection.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 mb-14">
             {[
-              "Ex-Military / Police Background",
+              "Elite Security / Law Enforcement Background",
               "SIA Close Protection License",
               "Full UK Driving License",
               "Advanced Medical (FREC3+)"
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-3 group cursor-default">
-                <CheckCircle className="w-5 h-5 text-[#881337]/50 group-hover:text-[#881337] transition-colors" />
+                <CheckCircle className="w-5 h-5 text-[#D4AF37]/50 group-hover:text-[#D4AF37] transition-colors" />
                 <span className="text-xs font-bold text-gray-700 uppercase tracking-widest group-hover:text-black transition-colors">
                   {item}
                 </span>
@@ -86,7 +83,7 @@ export default function Recruitment() {
 
           <Link
             href="/recruitment"
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0a0a0a] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#881337] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 w-full md:w-auto"
+            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0a0a0a] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#D4AF37] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 w-full md:w-auto"
           >
             Commence Vetting
             <ArrowRight className="w-4 h-4" />

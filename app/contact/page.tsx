@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ShieldCheck, Mail, MapPin, Phone, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
+import { ShieldCheck, MapPin, Phone, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -60,7 +60,7 @@ export default function ContactPage() {
       } else if (res.status === 429) {
         setServerError("Rate limit exceeded. Please wait 10 seconds.");
       } else {
-        setServerError("Transmission Failed. Secure Node unavailable.");
+        setServerError("Submission Failed. Service unavailable.");
       }
     } catch (error) {
       console.error(error);
@@ -74,15 +74,15 @@ export default function ContactPage() {
     return (
       <main className="bg-gray-50 min-h-screen">
         <div className="flex items-center justify-center min-h-screen pt-20">
-          <div className="max-w-lg w-full bg-white p-12 shadow-2xl border-t-4 border-[#881337] text-center animate-fade-in-up">
+          <div className="max-w-lg w-full bg-white p-12 shadow-2xl border-t-4 border-[#D4AF37] text-center animate-fade-in-up">
             <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-100">
               <CheckCircle className="w-10 h-10 text-green-700" />
             </div>
-            <h1 className="font-serif text-3xl font-bold text-gray-900 mb-2">Inquiry Transmitted.</h1>
+            <h1 className="font-serif text-3xl font-bold text-gray-900 mb-2">Inquiry Received.</h1>
             <p className="text-gray-500 text-sm mb-8">
-              Your message has been securely routed to our Booking Desk. A consultant will review your requirements immediately.
+              Your message has been received by our client services team. A consultant will review your requirements and respond shortly.
             </p>
-            <button onClick={() => window.location.reload()} className="text-xs font-bold uppercase tracking-widest text-[#881337] hover:underline">
+            <button onClick={() => window.location.reload()} className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:underline">
               Send Another Message
             </button>
           </div>
@@ -103,74 +103,41 @@ export default function ContactPage() {
 
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 mb-8 opacity-80">
-              <ShieldCheck className="w-5 h-5 text-[#881337]" />
+              <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />
               <span className="text-xs font-bold tracking-[0.2em] uppercase">D Trinity HQ</span>
             </div>
 
             <h1 className="font-serif text-4xl lg:text-5xl font-bold mb-8 leading-tight">
-              Establish <br /><span className="text-[#881337]">Secure Contact.</span>
+              Get in <br /><span className="text-[#D4AF37]">Touch.</span>
             </h1>
 
-            <p className="text-gray-400 text-sm leading-relaxed mb-12 border-l border-[#881337] pl-6 max-w-sm">
-              For immediate security concerns or bespoke consultation requests. Our communication channels are monitored 24/7.
+            <p className="text-gray-400 text-sm leading-relaxed mb-12 border-l border-[#D4AF37] pl-6 max-w-sm">
+              Contact us for security consultations and bespoke service requests. Our client services team is ready to assist you.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-white/5 rounded-sm group-hover:bg-[#881337] transition-colors duration-300">
+                <div className="p-3 bg-white/5 rounded-sm group-hover:bg-[#D4AF37] transition-colors duration-300">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">Headquarters</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">Corporate Headquarters</h4>
                   <p className="text-sm text-gray-500 leading-relaxed group-hover:text-white transition-colors">
                     Block B 35 Halley Garden<br />London, SE13 5PA
-                  </p>
-                  <h4 className="text-xs font-bold uppercase tracking-widest mt-4 mb-1 text-gray-300">Operations Center</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed group-hover:text-white transition-colors">
-                    205 Mizzen Mast<br />London, SE18 5NP
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-white/5 rounded-sm group-hover:bg-[#881337] transition-colors duration-300">
+                <div className="p-3 bg-white/5 rounded-sm group-hover:bg-[#D4AF37] transition-colors duration-300">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div className="space-y-4 w-full">
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">Business Development</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">General Enquiries</h4>
                     <p className="text-sm text-gray-500 font-mono group-hover:text-white transition-colors">
-                      Joseph Nkem <br />+44 7516 353273<br />
-                      <a href="mailto:Joseph.nkem@dtrinitysecurity.co" className="hover:text-[#881337]">Joseph.nkem@dtrinitysecurity.co</a>
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">Administrative Head</h4>
-                    <p className="text-sm text-gray-500 font-mono group-hover:text-white transition-colors">
-                      Tochukwu Ilo <br />+44 7594 562671<br />
-                      <a href="mailto:tochukwu.ilo@dtrinitysecurity.co" className="hover:text-[#881337]">tochukwu.ilo@dtrinitysecurity.co</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-white/5 rounded-sm group-hover:bg-[#881337] transition-colors duration-300">
-                  <ShieldCheck className="w-5 h-5 text-white" />
-                </div>
-                <div className="space-y-4 w-full">
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">Chief Security Officer</h4>
-                    <p className="text-sm text-gray-500 font-mono group-hover:text-white transition-colors">
-                      Arthur Onyedibe <br />+44 7365 727172<br />
-                      <a href="mailto:arthur.oyedibe@dtrinitysecurity.co" className="hover:text-[#881337]">arthur.oyedibe@dtrinitysecurity.co</a>
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-300">Lead Tech Architect</h4>
-                    <p className="text-sm text-gray-500 font-mono group-hover:text-white transition-colors">
-                      Jerome Igwike <br />+234 812 366 3220<br />
-                      <a href="mailto:Jerome.igwike@dtrinitysecurity.co" className="hover:text-[#881337]">Jerome.igwike@dtrinitysecurity.co</a>
+                      020 3648 4525<br />
+                      <a href="mailto:info@dtrinitysecurity.co" className="hover:text-[#D4AF37]">info@dtrinitysecurity.co</a>
                     </p>
                   </div>
                 </div>
@@ -237,9 +204,9 @@ export default function ContactPage() {
               <button
                 disabled={isSubmitting}
                 type="submit"
-                className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-[#881337] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#4C0519] transition-all shadow-xl hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-[#D4AF37] text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-[#B5952F] transition-all shadow-xl hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Transmitting..." : "Send Message"}
+                {isSubmitting ? "Sending..." : "Send Message"}
                 {!isSubmitting && <ArrowRight className="w-4 h-4" />}
               </button>
             </div>

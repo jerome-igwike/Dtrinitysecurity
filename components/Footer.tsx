@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, MapPin, Phone, Mail, Linkedin, Twitter, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
    return (
@@ -21,13 +21,13 @@ export default function Footer() {
                   </p>
                   <div className="flex gap-4 pt-4">
                      {/* Social Placeholders - Update hrefs when you have the accounts */}
-                     <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#881337] transition-colors">
+                     <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
                         <Linkedin className="w-4 h-4 text-white" />
                      </a>
-                     <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#881337] transition-colors">
+                     <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
                         <Twitter className="w-4 h-4 text-white" />
                      </a>
-                     <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#881337] transition-colors">
+                     <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
                         <Instagram className="w-4 h-4 text-white" />
                      </a>
                   </div>
@@ -37,12 +37,12 @@ export default function Footer() {
                <div>
                   <h4 className="font-serif text-lg text-white mb-6">Operations</h4>
                   <ul className="space-y-4 text-xs font-bold uppercase tracking-widest text-gray-500">
-                     <li><Link href="/services/close-protection" className="hover:text-[#881337] transition-colors">Close Protection</Link></li>
-                     <li><Link href="/services/residential" className="hover:text-[#881337] transition-colors">Residential Security</Link></li>
-                     <li><Link href="/services/family-office" className="hover:text-[#881337] transition-colors">Family Office</Link></li>
-                     <li><Link href="/services/investigation" className="hover:text-[#881337] transition-colors">Private Investigation</Link></li>
-                     <li><Link href="/services/surveillance" className="hover:text-[#881337] transition-colors">Surveillance</Link></li>
-                     <li><Link href="/recruitment" className="hover:text-white transition-colors text-[#881337]">Operative Recruitment</Link></li>
+                     <li><Link href="/services/close-protection" className="hover:text-[#D4AF37] transition-colors">Close Protection</Link></li>
+                     <li><Link href="/services/residential" className="hover:text-[#D4AF37] transition-colors">Residential Security</Link></li>
+                     <li><Link href="/services/family-office" className="hover:text-[#D4AF37] transition-colors">Family Office</Link></li>
+                     <li><Link href="/services/investigation" className="hover:text-[#D4AF37] transition-colors">Private Investigation</Link></li>
+                     <li><Link href="/services/surveillance" className="hover:text-[#D4AF37] transition-colors">Surveillance</Link></li>
+                     <li><Link href="/recruitment" className="hover:text-white transition-colors text-[#D4AF37]">Operative Recruitment</Link></li>
                   </ul>
                </div>
 
@@ -50,11 +50,11 @@ export default function Footer() {
                <div>
                   <h4 className="font-serif text-lg text-white mb-6">Intelligence</h4>
                   <ul className="space-y-4 text-xs font-bold uppercase tracking-widest text-gray-500">
-                     <li><Link href="/about" className="hover:text-[#881337] transition-colors">The Firm (About)</Link></li>
-                     <li><Link href="/articles" className="hover:text-[#881337] transition-colors">Security Briefings</Link></li>
-                     <li><Link href="/news" className="hover:text-[#881337] transition-colors">Press & Media</Link></li>
-                     <li><Link href="/testimonials" className="hover:text-[#881337] transition-colors">Client Verification</Link></li>
-                     <li><Link href="/contact" className="hover:text-[#881337] transition-colors">Secure Contact</Link></li>
+                     <li><Link href="/about" className="hover:text-[#D4AF37] transition-colors">The Firm (About)</Link></li>
+                     <li><Link href="/articles" className="hover:text-[#D4AF37] transition-colors">Security Briefings</Link></li>
+                     <li><Link href="/news" className="hover:text-[#D4AF37] transition-colors">Press & Media</Link></li>
+                     <li><Link href="/testimonials" className="hover:text-[#D4AF37] transition-colors">Client Verification</Link></li>
+                     <li><Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Secure Contact</Link></li>
                   </ul>
                </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
                   <h4 className="font-serif text-lg text-white mb-6">Secure Channel</h4>
                   <ul className="space-y-6 text-sm text-gray-400">
                      <li className="flex items-start gap-4">
-                        <MapPin className="w-5 h-5 text-[#881337] shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                         <span>
                            Block B 35 Halley Garden,<br />
                            London SE13 5PA<br />
@@ -73,11 +73,11 @@ export default function Footer() {
                         </span>
                      </li>
                      <li className="flex items-center gap-4">
-                        <Phone className="w-5 h-5 text-[#881337] shrink-0" />
+                        <Phone className="w-5 h-5 text-[#D4AF37] shrink-0" />
                         <span>+44 (0) 20 7000 0000</span>
                      </li>
                      <li className="flex items-center gap-4">
-                        <Mail className="w-5 h-5 text-[#881337] shrink-0" />
+                        <Mail className="w-5 h-5 text-[#D4AF37] shrink-0" />
                         <a href="mailto:bookings@dtrinitysecurity.co" className="hover:text-white transition-colors">
                            bookings@dtrinitysecurity.co
                         </a>

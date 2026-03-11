@@ -12,21 +12,21 @@ export default function Introduction() {
           <div className="space-y-8">
             <FadeIn direction="right" delay={0.2}>
               <div>
-                <span className="text-[#881337] font-bold tracking-widest uppercase text-xs mb-2 block">
+                <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs mb-2 block">
                   Who We Are
                 </span>
-                <h2 className="font-serif text-4xl md:text-5xl text-gray-900 font-bold leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl text-gray-500 font-bold leading-tight">
                   Not Just Guards. <br />
-                  <span className="italic text-gray-500">Guardians.</span>
+                  <span className="italic text-gray-900">Guardians.</span>
                 </h2>
               </div>
             </FadeIn>
 
             <FadeIn direction="right" delay={0.4}>
               <p className="text-gray-600 text-lg leading-relaxed font-light">
-                D Trinity operates at the intersection of military precision and corporate diplomacy. We do not provide &quot;generic&quot; security; we engineer bespoke protection ecosystems.
+                D Trinity operates at the intersection of expert security management and corporate diplomacy. We do not provide &quot;generic&quot; security; we engineer bespoke protection ecosystems.
                 <br /><br />
-                From high-net-worth individuals in Mayfair to visiting dignitaries in York, our operatives are selected for their ability to blend in, not stand out.
+                From high-net-worth individuals in Mayfair to visiting dignitaries in York and Bradford, our operatives are selected for their ability to blend in, not stand out.
               </p>
             </FadeIn>
 
@@ -34,12 +34,12 @@ export default function Introduction() {
             <FadeIn direction="right" delay={0.6}>
               <div className="space-y-4 pt-4 border-t border-gray-100">
                 {[
-                  "Former Military & Specialist Police Surveillance",
+                  "Expert Security Management & Surveillance",
                   "Intelligence-Led Risk Assessment",
                   "Discreet Residential & Asset Protection"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#881337]" />
+                    <CheckCircle className="w-5 h-5 text-[#D4AF37]" />
                     <span className="text-gray-800 font-medium text-sm tracking-wide uppercase">
                       {item}
                     </span>
@@ -50,7 +50,7 @@ export default function Introduction() {
 
             <FadeIn direction="right" delay={0.8}>
               <div className="pt-6">
-                <div className="inline-block border-l-4 border-[#881337] pl-6">
+                <div className="inline-block border-l-4 border-[#D4AF37] pl-6">
                   <p className="text-gray-900 font-serif italic text-xl">
                     &quot;Safety is not the absence of threat. It is the presence of capability.&quot;
                   </p>
@@ -63,7 +63,8 @@ export default function Introduction() {
           <FadeIn direction="left" delay={0.4} className="relative h-[600px] w-full rounded-sm overflow-hidden shadow-2xl group">
             {/* Optimized Next.js Image */}
             <Image
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2070&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1581568736305-49a04e012c13?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VjdXJpdHklMjBndWFyZHxlbnwwfHwwfHx8MA%3D%3D"
+              
               alt="Close Protection Detail"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

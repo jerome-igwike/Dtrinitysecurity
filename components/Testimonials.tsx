@@ -15,8 +15,8 @@ export default function Testimonials() {
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8 border-b border-white/10 pb-12">
           <div className="max-w-2xl animate-fade-in-up">
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-[1px] w-12 bg-[#881337]"></span>
-              <span className="text-[#881337] font-bold tracking-[0.2em] uppercase text-xs">
+              <span className="h-[1px] w-12 bg-[#D4AF37]"></span>
+              <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs">
                 Uncompromising Standards
               </span>
             </div>
@@ -44,12 +44,12 @@ export default function Testimonials() {
 
           {/* Large Featured Testimonial (Spans 8 cols) */}
           <div className="lg:col-span-8 bg-white/5 border border-white/10 p-10 md:p-14 relative group animate-fade-in-up delay-100">
-            <Quote className="w-12 h-12 text-[#881337] mb-8 opacity-80" />
+            <Quote className="w-12 h-12 text-[#D4AF37] mb-8 opacity-80" />
             <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-200 italic mb-10">
               &quot;The level of discretion and professionalism demonstrated by the D Trinity team is unmatched. They have seamlessly integrated into our family&apos;s life, providing absolute peace of mind without ever being intrusive.&quot;
             </p>
             <div className="flex items-center gap-4">
-              <div className="h-10 w-10 rounded-full bg-[#881337] flex items-center justify-center font-serif font-bold text-white">
+              <div className="h-10 w-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-serif font-bold text-white">
                 H
               </div>
               <div>
@@ -58,7 +58,7 @@ export default function Testimonials() {
               </div>
             </div>
             {/* Decorative Corner */}
-            <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-[#881337]/30 rounded-tr-lg opacity-50"></div>
+            <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-[#D4AF37]/30 rounded-tr-lg opacity-50"></div>
           </div>
 
           {/* Stacked Smaller Testimonials (Spans 4 cols) */}
@@ -67,28 +67,28 @@ export default function Testimonials() {
             {/* Card 1 */}
             <div className="flex-1 bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 animate-fade-in-up delay-200 hover:border-white/20 transition-colors">
               <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#881337] fill-[#881337]" />)}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />)}
               </div>
               <p className="font-serif text-lg text-gray-300 italic mb-6">
                 &quot;Their intelligence-led approach to our merger was evident. An indispensable asset to our executive suite.&quot;
               </p>
               <div>
                 <p className="font-bold text-white text-xs uppercase">CEO, FTSE 100 Company</p>
-                <p className="text-[#881337] text-[10px] uppercase">Corporate Security</p>
+                <p className="text-[#D4AF37] text-[10px] uppercase">Corporate Security</p>
               </div>
             </div>
 
             {/* Card 2 */}
             <div className="flex-1 bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 animate-fade-in-up delay-300 hover:border-white/20 transition-colors">
               <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#881337] fill-[#881337]" />)}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />)}
               </div>
               <p className="font-serif text-lg text-gray-300 italic mb-6">
                 &quot;I have worked with many CP teams, but D Trinity is in a different league. Sharp, educated, and polite.&quot;
               </p>
               <div>
                 <p className="font-bold text-white text-xs uppercase">Diplomatic Envoy</p>
-                <p className="text-[#881337] text-[10px] uppercase">Close Protection</p>
+                <p className="text-[#D4AF37] text-[10px] uppercase">Close Protection</p>
               </div>
             </div>
 

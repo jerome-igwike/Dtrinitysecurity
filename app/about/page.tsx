@@ -12,8 +12,8 @@ export default function AboutPage() {
          <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0">
                <Image
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                  alt="London Headquarters"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
+                  alt="Corporate Headquarters Lobby"
                   fill
                   priority
                   className="object-cover w-full h-full"
@@ -26,11 +26,11 @@ export default function AboutPage() {
                <div className="inline-flex items-center gap-2 px-3 py-1 border border-white/20 rounded-full bg-white/5 mb-6 backdrop-blur-md animate-fade-in">
                   <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-[#881337]" />
                   <span className="text-white/80 font-bold tracking-[0.2em] uppercase text-[10px]">
-                     Established 2024
+                     Established 2022
                   </span>
                </div>
                <h1 className="font-serif text-4xl md:text-7xl text-white mb-6 animate-fade-in-up leading-tight">
-                  The Firm.
+                  The organization.
                </h1>
                <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100">
                   D Trinity Security was founded on a single principle: <br className="hidden md:block" />
@@ -54,7 +54,7 @@ export default function AboutPage() {
                         In a volatile world, standard security is reactive. It waits for a threat to appear. D Trinity is proactive. We operate on intelligence, foresight, and meticulous planning.
                      </p>
                      <p>
-                        Headquartered in London, our firm recruits exclusively from the top tier of the British security establishment. We do not just &quot;watch the door.&quot; We analyze the environment, vet the staff, secure the digital perimeter, and ensure that our clients can live their lives without interruption or intrusion.
+                        Headquartered in London, our organization recruits exclusively from the top tier of the British security establishment. We do not just &quot;watch the door.&quot; We analyze the environment, vet the staff, secure the digital perimeter, and ensure that our clients can live their lives without interruption or intrusion.
                      </p>
                   </div>
 
@@ -71,16 +71,16 @@ export default function AboutPage() {
                <div className="lg:w-1/2 grid grid-cols-2 gap-3 md:gap-4 w-full mt-8 lg:mt-0">
                   <div className="relative h-48 md:h-80 w-full rounded-sm overflow-hidden mt-0 md:mt-12">
                      <Image
-                        src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop"
-                        alt="Surveillance Lens"
+                        src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop"
+                        alt="CCTV Surveillance"
                         fill
                         className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                      />
                   </div>
                   <div className="relative h-48 md:h-80 w-full rounded-sm overflow-hidden">
                      <Image
-                        src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2070&auto=format&fit=crop"
-                        alt="Secure Technology"
+                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                        alt="Security Control Center"
                         fill
                         className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                      />
@@ -117,7 +117,7 @@ export default function AboutPage() {
             <div className="max-w-7xl mx-auto">
                <div className="text-center mb-12 md:mb-16">
                   <span className="text-[#881337] font-bold tracking-widest uppercase text-xs">Our Ethos</span>
-                  <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mt-4">The Trinity Standard.</h2>
+                  <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mt-4">The D Trinity Corporate Standard.</h2>
                </div>
 
                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -127,7 +127,7 @@ export default function AboutPage() {
                      </div>
                      <h3 className="font-serif text-xl mb-4">Absolute Discretion</h3>
                      <p className="text-gray-500 text-sm leading-relaxed">
-                        We sign stringent NDAs. We do not talk to the press. We do not post on social media. Your business remains yours.
+                        GDPR and confidential ethical background in customer centered security services and all information management.
                      </p>
                   </div>
 

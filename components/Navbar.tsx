@@ -27,7 +27,7 @@ export default function Navbar() {
     {
       name: "About",
       dropdown: [
-        { name: "About The Firm", href: "/about" },
+        { name: "About The Organization", href: "/about" },
         { name: "Recruitment", href: "/recruitment" }
       ]
     },
@@ -64,8 +64,8 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-3 group z-50">
-            <div className={`transition-all duration-300 hover:opacity-80 ${!showBackground ? "brightness-0 invert" : "brightness-0"}`}>
-              <Image src="/no-bg-logo.png" alt="D Trinity Logo" width={180} height={50} className="object-contain" priority />
+            <div className={`transition-all duration-300 hover:opacity-100 ${!showBackground ? "brightness-0 invert drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] opacity-90" : "brightness-0 opacity-100 drop-shadow-md"}`}>
+              <Image src="/no-bg-logo.png" alt="D Trinity Logo" width={220} height={60} className="object-contain" priority />
             </div>
           </Link>
 
@@ -82,7 +82,7 @@ export default function Navbar() {
                   {item.dropdown ? (
                     <button
                       className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.15em] transition-colors
-                      ${showBackground ? "text-gray-700 hover:text-[#881337]" : "text-white/90 hover:text-white"}`}
+                      ${showBackground ? "text-gray-700 hover:text-[#D4AF37]" : "text-white/90 hover:text-white"}`}
                     >
                       {item.name}
                       <ChevronDown className="w-3 h-3 group-hover:rotate-180 transition-transform duration-300" />
@@ -91,7 +91,7 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={`text-[11px] font-bold uppercase tracking-[0.15em] transition-colors
-                      ${showBackground ? "text-gray-700 hover:text-[#881337]" : "text-white/90 hover:text-white"}`}
+                      ${showBackground ? "text-gray-700 hover:text-[#D4AF37]" : "text-white/90 hover:text-white"}`}
                     >
                       {item.name}
                     </Link>
@@ -101,12 +101,12 @@ export default function Navbar() {
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 w-60">
-                    <div className="bg-white border-t-[3px] border-[#881337] rounded-b-sm shadow-xl py-1 animate-fade-in-up">
+                    <div className="bg-white border-t-[3px] border-[#D4AF37] rounded-b-sm shadow-xl py-1 animate-fade-in-up">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-5 py-2.5 text-[11px] font-bold text-gray-500 hover:bg-gray-50 hover:text-[#881337] uppercase tracking-wide transition-all"
+                          className="block px-5 py-2.5 text-[11px] font-bold text-gray-500 hover:bg-gray-50 hover:text-[#D4AF37] uppercase tracking-wide transition-all"
                         >
                           {subItem.name}
                         </Link>
@@ -124,8 +124,8 @@ export default function Navbar() {
               href="/contact"
               className={`px-5 py-2.5 font-bold text-[10px] tracking-[0.2em] uppercase rounded-sm transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5
               ${showBackground
-                  ? "bg-[#881337] hover:bg-[#4C0519] text-white"
-                  : "bg-white text-[#881337] hover:bg-gray-50"}`}
+                  ? "bg-[#D4AF37] hover:bg-[#B5952F] text-white"
+                  : "bg-white text-[#D4AF37] hover:bg-gray-50"}`}
             >
               Contact Us
             </Link>
@@ -149,7 +149,7 @@ export default function Navbar() {
               <div key={item.name} className="border-b border-gray-50 last:border-0">
                 {item.dropdown ? (
                   <div className="py-2">
-                    <span className="block px-6 py-2 text-xs font-bold text-[#881337] uppercase tracking-widest opacity-80">
+                    <span className="block px-6 py-2 text-xs font-bold text-[#D4AF37] uppercase tracking-widest opacity-80">
                       {item.name}
                     </span>
                     <div className="bg-gray-50/50">
@@ -157,7 +157,7 @@ export default function Navbar() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block pl-10 pr-6 py-3 text-[11px] font-bold text-gray-600 hover:text-[#881337] uppercase tracking-wide border-l-2 border-transparent hover:border-[#881337]"
+                          className="block pl-10 pr-6 py-3 text-[11px] font-bold text-gray-600 hover:text-[#D4AF37] uppercase tracking-wide border-l-2 border-transparent hover:border-[#D4AF37]"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -168,7 +168,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-6 py-4 text-xs font-bold text-gray-900 hover:text-[#881337] uppercase tracking-widest"
+                    className="block px-6 py-4 text-xs font-bold text-gray-900 hover:text-[#D4AF37] uppercase tracking-widest"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -179,7 +179,7 @@ export default function Navbar() {
             <div className="p-6 bg-gray-50">
               <Link
                 href="/contact"
-                className="block w-full text-center py-4 bg-[#881337] text-white font-bold text-xs uppercase tracking-widest rounded-sm shadow-sm"
+                className="block w-full text-center py-4 bg-[#D4AF37] text-white font-bold text-xs uppercase tracking-widest rounded-sm shadow-sm"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
