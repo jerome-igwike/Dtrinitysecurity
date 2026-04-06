@@ -43,7 +43,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
         <div className="relative z-10 w-full max-w-4xl px-6 pb-16">
           <div className="flex items-center gap-4 text-white/70 text-xs font-bold uppercase tracking-widest mb-4">
-            <span className="bg-[#881337] text-white px-2 py-1">{data.category}</span>
+            <span className="bg-[#D4AF37] text-white px-2 py-1">{data.category}</span>
             <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {data.date}</span>
             <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {data.readTime}</span>
           </div>
@@ -68,7 +68,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
           {/* MAIN TEXT */}
           <div className="lg:w-2/3">
-            <div className="prose prose-lg text-gray-600 font-light leading-loose prose-h2:font-serif prose-h2:text-gray-900 prose-h3:font-serif prose-h3:text-gray-900 prose-a:text-[#881337] prose-a:no-underline hover:prose-a:underline">
+            <div className="prose prose-lg text-gray-600 font-light leading-loose prose-h2:font-serif prose-h2:text-gray-900 prose-h3:font-serif prose-h3:text-gray-900 prose-a:text-[#D4AF37] prose-a:no-underline hover:prose-a:underline">
               <MDXRemote source={post.content} />
             </div>
 
@@ -86,12 +86,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="lg:w-1/3 space-y-8">
             {/* CTA WIDGET */}
             <div className="bg-[#0a0a0a] text-white p-8 rounded-sm">
-              <ShieldAlert className="w-8 h-8 text-[#881337] mb-4" />
+              <ShieldAlert className="w-8 h-8 text-[#D4AF37] mb-4" />
               <h3 className="font-serif text-2xl mb-4">Security Concern?</h3>
               <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                 If this briefing highlights a vulnerability in your current setup, contact our ops desk immediately.
               </p>
-              <Link href="/contact" className="flex items-center justify-between w-full bg-[#881337] px-6 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#0a0a0a] transition-all">
+              <Link href="/contact" className="flex items-center justify-between w-full bg-[#D4AF37] px-6 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#0a0a0a] transition-all">
                 Secure Contact
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -102,17 +102,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <h4 className="font-bold text-gray-900 uppercase tracking-widest text-xs mb-6">Related Protocols</h4>
               <ul className="space-y-4">
                 <li>
-                  <Link href="/services/close-protection" className="block text-sm text-gray-600 hover:text-[#881337] transition-colors">
+                  <Link href="/services/close-protection" className="block text-sm text-gray-600 hover:text-[#D4AF37] transition-colors">
                     Close Protection Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/residential" className="block text-sm text-gray-600 hover:text-[#881337] transition-colors">
+                  <Link href="/services/residential" className="block text-sm text-gray-600 hover:text-[#D4AF37] transition-colors">
                     Residential Security Teams
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/investigation" className="block text-sm text-gray-600 hover:text-[#881337] transition-colors">
+                  <Link href="/services/investigation" className="block text-sm text-gray-600 hover:text-[#D4AF37] transition-colors">
                     Private Investigation
                   </Link>
                 </li>

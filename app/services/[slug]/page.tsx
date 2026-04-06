@@ -17,57 +17,84 @@ const servicesData: Record<string, {
 }> = {
   "close-protection": {
     title: "Close Protection",
-    subtitle: "The Invisible Shield for High-Net-Worth Individuals.",
-    description: "Our Close Protection operatives are not &apos;bodyguards&apos;. They are intelligence-led security specialists recruited from UK Special Forces and elite police units. We provide a protective ecosystem that enables our clients to conduct business and live freely.",
-    features: ["Former SAS / SBS Operatives", "Counter-Surveillance", "Covert Protection Profiles", "Trauma Life Support"],
-    image: "https://images.unsplash.com/photo-1551847677-dc82d764e1eb?q=80&w=2070&auto=format&fit=crop",
+    subtitle: "Elite Discretion. Absolute Confidence.",
+    description: "Our Close Protection operatives operate at the highest echelon of the industry. Selected exclusively from UK Special Forces, Royal Military Police, and elite corporate protection backgrounds, we design a customized security footprint that guarantees your safety without compromising your lifestyle and mobility.",
+    features: ["Former Tier-One Military Operatives", "Advanced Counter-Surveillance", "Discrete Low-Profile Architecture", "Tactical Medical Support (FREC 4+)"],
+    image: "https://media.istockphoto.com/id/983223912/photo/bodyguard-standing-at-businessman-car-and-reviewing-territory.webp?a=1&b=1&s=612x612&w=0&k=20&c=e_U_7OgtcHjNofBQ2YI2ysLGMnoJkutGOIdH8G31bYw=",
     stat: "100%",
-    statLabel: "Confidentiality",
+    statLabel: "Client Confidentiality",
   },
   "residential": {
     title: "Residential Security",
-    subtitle: "Fortifying Your Sanctuary.",
-    description: "Your home is the last line of defence. D Trinity provides 24/7 residential security teams (RST) that blend seamlessly into your lifestyle. We combine physical presence with advanced technical surveillance.",
-    features: ["24/7 Residential Security Teams", "Access Control & Vetting", "CCTV & Drone Defense", "Rapid Response Protocols"],
-    image: "https://images.unsplash.com/photo-1600596542815-e328701102b9?q=80&w=2069&auto=format&fit=crop",
+    subtitle: "Impenetrable Security for Ultimate Sanctuaries.",
+    description: "Your home must remain a sanctuary. D Trinity deploys highly trained Residential Security Teams (RST) that provide invisible but omnipresent protection. Integrating cutting-edge perimeter technology with proactive human intelligence, we intercept threats long before they reach your threshold.",
+    features: ["24/7 Covert RST Deployment", "Strict Access & Perimeter Control", "Drone Counter-Measures & CCTV", "Rapid Threat Neutralisation"],
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop",
     stat: "24/7",
-    statLabel: "Active Monitoring",
+    statLabel: "Active Perimeter Monitoring",
   },
   "family-office": {
     title: "Family Office Security",
-    subtitle: "Protecting Legacy, Wealth, and Reputation.",
-    description: "We integrate directly with Family Offices to provide a holistic risk management strategy. Beyond physical safety, we protect against reputational damage, cyber threats, and corporate espionage.",
-    features: ["Holistic Risk Assessments", "Travel Security Management", "Staff Vetting", "Cyber & Digital Protection"],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+    subtitle: "Safeguarding Legacy, Wealth, and Reputation.",
+    description: "Generational wealth commands complex security protocols. We engineer comprehensive risk management strategies for Family Offices, mitigating physical vulnerabilities, neutralizing corporate espionage, and protecting digital footprints globally.",
+    features: ["Global Risk & Threat Analysis", "International Travel Security", "Bespoke Staff Vetting", "Cyber Protocol Architecture"],
+    image: "https://images.unsplash.com/photo-1555529733-0e670560f8e1?q=80&w=2070&auto=format&fit=crop",
     stat: "Global",
     statLabel: "Operational Reach",
   },
   "investigation": {
     title: "Private Investigation",
     subtitle: "Intelligence is the Ultimate Asset.",
-    description: "Information is power. D Trinity&apos;s investigation division specializes in corporate due diligence, asset tracing, and matrimonial surveillance. We gather admissible evidence lawfully and discreetly.",
-    features: ["Corporate Due Diligence", "Asset Tracing & Recovery", "Matrimonial Surveillance", "Litigation Support"],
+    description: "Actionable intelligence relies on uncompromised investigation. Our covert divisions execute corporate due diligence, high-stakes asset tracing, and discrete private matters. We lawfully gather irrefutable, evidential-grade intelligence to protect your global interests.",
+    features: ["Corporate Due Diligence", "Global Asset Tracing & Recovery", "Matrimonial & Private Surveillance", "Litigation Evidence Gathering"],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
     stat: "98%",
     statLabel: "Case Success Rate",
   },
   "surveillance": {
-    title: "Surveillance Services",
-    subtitle: "Seeing Without Being Seen.",
-    description: "Our surveillance teams are masters of the grey man concept. Whether tracking a person of interest or monitoring a hostile location, we utilize state-of-the-art optics and tracking technology.",
-    features: ["Static & Mobile Surveillance", "GPS Vehicle Tracking", "Counter-Surveillance (TSCM)", "Detailed Intel Reports"],
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop",
+    title: "Surveillance Operations",
+    subtitle: "Total Awareness. Zero Visibility.",
+    description: "Actionable intelligence relies on uncompromised surveillance. Our covert teams are masters of the 'grey man' doctrine. Utilizing advanced technical optics and relentless mobile tracking, we gather legally admissible evidence for corporate due diligence, asset tracing, and high-stakes private matters.",
+    features: ["Covert Mobile & Static Surveillance", "GPS Tracking & Counter-Surveillance", "Asset Tracing & Due Diligence", "Evidential Grade Intel Reports"],
+    image: "https://images.unsplash.com/photo-1581568736305-49a04e012c13?q=80&w=2070&auto=format&fit=crop",
     stat: "HD",
-    statLabel: "Evidence Quality",
+    statLabel: "Intelligence Quality",
   },
   "chauffeurs": {
-    title: "Security Chauffeurs",
-    subtitle: "Secure Mobility in a Volatile World.",
-    description: "A driver is just a driver. A security chauffeur is a trained operative capable of evasive driving and threat detection. Our fleet of armored and non-armored luxury vehicles ensures you arrive safely.",
-    features: ["Advanced Evasive Driving", "Armored Vehicle Fleet", "Route Planning & Recon", "Airport Tarmac Access"],
+    title: "Secure Logistics & Chauffeurs",
+    subtitle: "Uncompromised Transit Across Unpredictable Terrains.",
+    description: "Movement exposes vulnerability. Our Security Chauffeurs are defensive driving experts capable of executing precise route planning and evasive maneuvers. Operating a fleet of high-end, discreet, and optional armoured vehicles, we ensure flawless, secure transit.",
+    features: ["Advanced Defensive Driving", "Armoured & Discreet Fleet", "Strategic Route Reconnaissance", "Executive Airport Transfers"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop",
     stat: "ZERO",
     statLabel: "Incidents on Route",
+  },
+  "events": {
+    title: "Event Security",
+    subtitle: "Precision Control for High-Profile Gatherings.",
+    description: "High-value events demand flawless orchestration. D Trinity provides elite security management for charity galas, corporate summits, and private gatherings. Our personnel deliver uncompromising access control, crowd dynamics management, and secure VIP extraction mapping.",
+    features: ["Discreet VIP Protection Units", "Strategic Access & Perimeter Control", "Hostile Environment Protocols", "Rapid Extraction Logistics"],
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop",
+    stat: "300+",
+    statLabel: "Events Secured",
+  },
+  "assets": {
+    title: "Asset Protection",
+    subtitle: "Absolute Security for Invaluable Commodities.",
+    description: "We orchestrate the secure transit, storage, and guarding of high-value assets. Whether fine art, sensitive corporate data, or high-value commodities, our heavily vetted logistics operatives assure safe passage through heavily fortified custodial networks.",
+    features: ["Secure High-Value Transit", "Covert Armed & Unarmed Escorts", "Risk Assessed Storage Networks", "Encrypted Document Logistics"],
+    image: "https://images.unsplash.com/photo-1635434473843-bac9feff5e8e?q=80&w=2070&auto=format&fit=crop",
+    stat: "£1B+",
+    statLabel: "Capital Protected",
+  },
+  "facility-management": {
+    title: "Secure Cleaning & Facility Management",
+    subtitle: "Premium Cleaning by Security-Cleared Personnel.",
+    description: "Trusting someone with the cleanliness of your private estate or corporate facility shouldn't mean compromising your security. We provide premium deep cleaning, specialized housekeeping, and facility management services delivered exclusively by rigorously vetted, security-cleared personnel. We guarantee immaculate results and absolute confidentiality for your most sensitive environments.",
+    features: ["Security-Vetted Cleaning Operatives", "Premium Deep Cleaning & Housekeeping", "Sensitive Environment Maintenance", "Strict Non-Disclosure Protocols"],
+    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=2070&auto=format&fit=crop",
+    stat: "Level 3",
+    statLabel: "Vetting Standard",
   },
 };
 
@@ -80,7 +107,7 @@ export default function ServicePage() {
     return (
       <div className="min-h-screen pt-32 text-center bg-white flex flex-col items-center justify-center">
 
-        <h1 className="text-2xl md:text-3xl font-serif text-[#881337] mb-4">Service Protocol Not Found</h1>
+        <h1 className="text-2xl md:text-3xl font-serif text-[#D4AF37] mb-4">Service Protocol Not Found</h1>
         <Link href="/" className="px-6 py-3 bg-[#0a0a0a] text-white font-bold uppercase tracking-widest text-xs rounded-sm">
           Return to Base
         </Link>
@@ -110,7 +137,7 @@ export default function ServicePage() {
         {/* Content */}
         <div className="relative z-10 text-center px-6 max-w-4xl pt-16 md:pt-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 border border-white/30 rounded-full bg-white/10 mb-6 backdrop-blur-md animate-fade-in">
-            <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-[#881337]" />
+            <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-[#D4AF37]" />
             <span className="text-white/90 font-bold tracking-[0.2em] uppercase text-[8px] md:text-[10px]">
               D Trinity Operations
             </span>
@@ -130,7 +157,7 @@ export default function ServicePage() {
 
           {/* LEFT: Description */}
           <div className="lg:w-1/2 space-y-6 md:space-y-8 animate-fade-in-up delay-200">
-            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 border-l-4 border-[#881337] pl-6">
+            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 border-l-4 border-[#D4AF37] pl-6">
               Operational Brief
             </h2>
             <p className="text-gray-600 leading-loose text-base md:text-lg">
@@ -139,7 +166,7 @@ export default function ServicePage() {
 
             <div className="bg-gray-50 p-6 md:p-8 border border-gray-100 rounded-sm">
               <div className="flex items-center gap-4 mb-2">
-                <Activity className="w-5 h-5 md:w-6 md:h-6 text-[#881337]" />
+                <Activity className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37]" />
                 <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">{data.statLabel}</span>
               </div>
               <p className="font-serif text-3xl md:text-4xl font-bold text-gray-900">{data.stat}</p>
@@ -149,17 +176,17 @@ export default function ServicePage() {
           {/* RIGHT: Features & CTA */}
           <div className="lg:w-1/2 animate-fade-in-up delay-300">
             <div className="bg-[#0a0a0a] text-white p-8 md:p-10 rounded-sm relative overflow-hidden shadow-2xl">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#881337] opacity-10 rounded-bl-full"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37] opacity-10 rounded-bl-full"></div>
 
               <h3 className="font-serif text-xl md:text-2xl mb-8 flex items-center gap-3">
-                <Lock className="w-5 h-5 text-[#881337]" />
+                <Lock className="w-5 h-5 text-[#D4AF37]" />
                 Protocol Includes:
               </h3>
 
               <ul className="space-y-4 md:space-y-6 mb-10 md:mb-12">
                 {data.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-4 group">
-                    <CheckCircle className="w-5 h-5 text-[#881337] shrink-0 mt-0.5 group-hover:text-white transition-colors" />
+                    <CheckCircle className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5 group-hover:text-white transition-colors" />
                     <span className="text-gray-300 text-sm tracking-wide group-hover:text-white transition-colors leading-relaxed">{feature}</span>
                   </li>
                 ))}
@@ -171,7 +198,7 @@ export default function ServicePage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="flex items-center justify-between w-full bg-white text-[#0a0a0a] px-6 py-4 font-bold uppercase tracking-widest text-xs hover:bg-[#881337] hover:text-white transition-all duration-300 group shadow-lg"
+                  className="flex items-center justify-between w-full bg-white text-[#0a0a0a] px-6 py-4 font-bold uppercase tracking-widest text-xs hover:bg-[#D4AF37] hover:text-white transition-all duration-300 group shadow-lg"
                 >
                   Request Deployment
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />

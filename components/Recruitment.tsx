@@ -53,7 +53,7 @@ export default function Recruitment() {
         <div className="max-w-xl mx-auto lg:mx-0">
           <span className="flex items-center gap-2 text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs mb-6">
             <span className="w-8 h-[2px] bg-[#D4AF37]"></span>
-            Join The Elite
+            Join The Team
           </span>
 
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-gray-400 mb-8 leading-[1.1]">
@@ -62,15 +62,15 @@ export default function Recruitment() {
           </h2>
 
           <p className="text-gray-600 text-lg font-light leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6">
-            D Trinity is not a volume employer. We operate a stringent selection process, seeking individuals with exemplary service records in elite security sectors, law enforcement, or corporate protection.
+            D'Trinity is not a volume employer. We operate a stringent selection process, seeking individuals with exemplary service records in elite security sectors, law enforcement, or corporate protection.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 mb-14">
             {[
               "Elite Security / Law Enforcement Background",
-              "SIA Close Protection License",
+              "SIA Trained Personnels",
               "Full UK Driving License",
-              "Advanced Medical (FREC3+)"
+              "Medical and Physical Fitness"
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-3 group cursor-default">
                 <CheckCircle className="w-5 h-5 text-[#D4AF37]/50 group-hover:text-[#D4AF37] transition-colors" />

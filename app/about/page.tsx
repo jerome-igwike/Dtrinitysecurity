@@ -33,7 +33,7 @@ export default function AboutPage() {
                   The organization.
                </h1>
                <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100">
-                  D Trinity Security was founded on a single principle: <br className="hidden md:block" />
+                  D'Trinity Security was founded on a single principle: <br className="hidden md:block" />
                   <span className="text-white block mt-2 md:inline">True security is felt, not seen.</span>
                </p>
             </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   </div>
                   <div className="relative h-48 md:h-80 w-full rounded-sm overflow-hidden">
                      <Image
-                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1610374792793-f016b77ca51a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tcGFueSUyMGJ1aWxkaW5nfGVufDB8fDB8fHww"
                         alt="Security Control Center"
                         fill
                         className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"

@@ -24,9 +24,9 @@ export default function Introduction() {
 
             <FadeIn direction="right" delay={0.4}>
               <p className="text-gray-600 text-lg leading-relaxed font-light">
-                D Trinity operates at the intersection of expert security management and corporate diplomacy. We do not provide &quot;generic&quot; security; we engineer bespoke protection ecosystems.
+                D'Trinity operates at the intersection of expert security management and corporate diplomacy. We do not provide &quot;generic&quot; security; we engineer bespoke protection ecosystems.
                 <br /><br />
-                From high-net-worth individuals in Mayfair to visiting dignitaries in York and Bradford, our operatives are selected for their ability to blend in, not stand out.
+                From high-net-worth individuals in Mayfair to visiting dignitaries in York, Birmingham and Bradford. Our operatives are selected for their ability to blend in, not stand out.
               </p>
             </FadeIn>
 

@@ -20,7 +20,7 @@ export default function NewsPage() {
 
             <div className="relative z-10 text-center px-6 max-w-4xl pt-20">
                <div className="inline-flex items-center gap-2 px-3 py-1 border border-white/20 rounded-full bg-white/5 mb-6 backdrop-blur-md animate-fade-in">
-                  <Newspaper className="w-3 h-3 text-[#881337]" />
+                  <Newspaper className="w-3 h-3 text-[#D4AF37]" />
                   <span className="text-white/80 font-bold tracking-[0.2em] uppercase text-[10px]">
                      Corporate Communications
                   </span>
@@ -58,11 +58,11 @@ export default function NewsPage() {
                         {/* Text */}
                         <div className="flex flex-col w-full">
                            <div className="flex items-center gap-3 mb-2">
-                              <span className="text-[#881337] text-[10px] font-bold uppercase tracking-widest">{news.category}</span>
+                              <span className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">{news.category}</span>
                               <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
                               <span className="text-gray-400 text-[10px] font-bold uppercase tracking-widest">{news.date}</span>
                            </div>
-                           <h3 className="font-serif text-xl text-gray-900 mb-3 group-hover:text-[#881337] transition-colors leading-tight">
+                           <h3 className="font-serif text-xl text-gray-900 mb-3 group-hover:text-[#D4AF37] transition-colors leading-tight">
                               {news.title}
                            </h3>
                            <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-2">
@@ -88,11 +88,11 @@ export default function NewsPage() {
                      </p>
                      <div className="space-y-4">
                         <div className="flex items-center gap-3 text-sm text-gray-600">
-                           <Mail className="w-4 h-4 text-[#881337]" />
+                           <Mail className="w-4 h-4 text-[#D4AF37]" />
                            <a href="mailto:press@dtrinitysecurity.co" className="hover:text-black transition-colors">press@dtrinitysecurity.co</a>
                         </div>
                         <div className="flex items-center gap-3 text-sm text-gray-600">
-                           <Phone className="w-4 h-4 text-[#881337]" />
+                           <Phone className="w-4 h-4 text-[#D4AF37]" />
                            <span>+44 (0) 20 7000 0000</span>
                         </div>
                      </div>

@@ -9,11 +9,11 @@ import FadeIn from "@/components/FadeIn";
 const slides = [
   {
     id: 1,
-    badge: "Operations: London • York",
+    badge: "Operations: London • York • Birmingham • Bradford",
     headline: "Elite Protection.",
     subheadline: "Absolute Discretion.",
     text: "Premium security ecosystems, Uncompromised protection, Integrated solutions. SIA Licensed Professionals. Corporate Security Specialists.",
-    image: "https://images.unsplash.com/photo-1566245024852-04fbf7842ce9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2VjdXJpdHklMjBndWFyZHxlbnwwfHwwfHx8MA%3D%3D"
+    image: "https://images.unsplash.com/photo-1566245024852-04fbf7842ce9?q=80&w=3840&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -21,40 +21,52 @@ const slides = [
     headline: "Modern Control.",
     subheadline: "Real-Time Monitoring.",
     text: "State-of-the-art CCTV surveillance and rapid response systems. Leveraging modern technology to secure your corporate infrastructure round the clock.",
-    image: "https://images.unsplash.com/flagged/photo-1570343271132-8949dd284a04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNlY3VyaXR5JTIwZ3VhcmR8ZW58MHx8MHx8fDA%3D"
+    image: "https://images.unsplash.com/flagged/photo-1570343271132-8949dd284a04?q=80&w=3840&auto=format&fit=crop"
   },
   {
     id: 3,
-    badge: "Asset & Estate Management",
+    badge: "Asset & Estate Security Management",
     headline: "Dynamic Security.",
-    subheadline: "Active Site Management.",
+    subheadline: "Active Site Security.",
     text: "Professional on-site personnel and streamlined access control. We utilize modern protocols to secure your assets and daily operations efficiently.",
-    image: "https://plus.unsplash.com/premium_photo-1661964274973-c739a6a5d520?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9keWd1YXJkfGVufDB8fDB8fHww"
+    image: "https://plus.unsplash.com/premium_photo-1661964274973-c739a6a5d520?q=80&w=3840&auto=format&fit=crop"
   }
 ];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false); // NEW: Track hover state
 
   useEffect(() => {
+    // If user is hovering, don't run the interval
+    if (isPaused) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]); // Add isPaused to dependency array so it reacts instantly
 
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-gray-900">
+    <section 
+      // NEW: Added group/hero for CSS pausing, and onMouseEnter/Leave for React pausing
+      className="group/hero relative h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-gray-900"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
 
       {/* 1. IMAGE LAYER (Ken Burns Effect) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {slides.map((s, index) => (
           <div
             key={s.id}
+            // NEW: group-hover/hero:[animation-play-state:paused] pauses the Ken Burns zoom when hovered
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100 z-10 animate-ken-burns" : "opacity-0 z-0"
+              index === currentSlide 
+                ? "opacity-100 z-10 animate-ken-burns group-hover/hero:[animation-play-state:paused]" 
+                : "opacity-0 z-0"
             }`}
           >
             <Image
@@ -77,6 +89,7 @@ export default function Hero() {
         
         {/* We use key={slide.id} to force React to remount the FadeIn components so the animations replay on slide change */}
         <div key={slide.id} className="flex flex-col items-center">
+          
           {/* Badge */}
           <FadeIn direction="down" delay={0.2}>
             <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 mb-8 shadow-2xl">
@@ -110,22 +123,24 @@ export default function Hero() {
             </div>
           </FadeIn>
 
-          {/* Buttons */}
+         {/* Buttons */}
           <FadeIn direction="up" delay={0.8}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full px-4 sm:px-0">
+              
+              {/* NEW: Increased padding to py-5 px-12, font to text-sm, added shadow-2xl for extreme visibility */}
               <Link
                 href="/contact"
-                className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-white font-bold text-xs tracking-[0.15em] uppercase rounded-lg hover:bg-[#B5952F] transition-all shadow-lg hover:shadow-[#D4AF37]/50 flex items-center justify-center gap-3 group"
+                className="w-full sm:w-auto px-12 py-5 bg-[#D4AF37] text-gray-900 font-extrabold text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-[#B5952F] transition-all shadow-2xl hover:shadow-[#D4AF37]/50 flex items-center justify-center gap-3 group/btn"
               >
-                Start Consultation
-                <ArrowRight className="w-4 h-4 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-transform" />
+                Start Enquiry
+                <ArrowRight className="w-5 h-5 text-gray-800 group-hover/btn:text-gray-900 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
 
               <a
                 href="tel:02036484525"
-                className="w-full sm:w-auto px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-xs tracking-[0.15em] uppercase rounded-lg hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center gap-3"
+                className="w-full sm:w-auto px-12 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm tracking-[0.15em] uppercase rounded-lg hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center gap-3"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 020 3648 4525
               </a>
             </div>

@@ -1,122 +1,158 @@
-"use client";
+import { Quote, Star, ShieldCheck, Lock } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import FadeIn from "@/components/FadeIn";
 
-import { Quote, ShieldCheck, Award, Lock, Star } from "lucide-react";
+export default function TestimonialsPage() {
+  const reviews = [
+    {
+      name: "Richard H.",
+      role: "Private Client",
+      location: "Surrey Estate",
+      text: "Having security around your family can often feel intrusive, but the D Trinity team operates differently. They blend perfectly into the background of our estate while giving us complete peace of mind. Absolute professionals.",
+      tag: "Residential Security"
+    },
+    {
+      name: "Sarah M.",
+      role: "Chief Executive",
+      location: "City of London",
+      text: "I travel frequently between London and the Middle East. The operatives handle my logistics seamlessly. I never have to worry about route planning or hotel advances; it's all handled flawlessly before I even land.",
+      tag: "Executive Protection"
+    },
+    {
+      name: "David L.",
+      role: "Company Director",
+      location: "Mayfair, London",
+      text: "We hosted a highly sensitive private event last month. The operators were immaculately dressed, incredibly polite to our guests, but maintained a completely secure perimeter. You get exactly what you pay for.",
+      tag: "Event Security"
+    },
+    {
+      name: "Elena V.",
+      role: "Board Member",
+      location: "Canary Wharf",
+      text: "When our firm needed discreet corporate intelligence during a difficult acquisition, D Trinity provided clear, actionable insights without raising any alarms. Their surveillance team is exceptionally sharp and discreet.",
+      tag: "Corporate Intelligence"
+    },
+    {
+      name: "Michael T.",
+      role: "Managing Partner",
+      location: "Knightsbridge",
+      text: "The secure transport service is simply flawless. The drivers are clearly highly trained, the vehicles are immaculate, and the punctuality is exact to the minute. They take the stress entirely out of moving through London.",
+      tag: "Secure Transport"
+    },
+    {
+      name: "James C.",
+      role: "Private Client",
+      location: "Yorkshire",
+      text: "I was initially reluctant to hire a close protection team, but the operatives assigned to me were fantastic. Highly educated, polite when spoken to, but constantly scanning and assessing. I won't use anyone else.",
+      tag: "Close Protection"
+    }
+  ];
 
-export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#0a0a0a] text-white border-t border-white/5 relative">
+    <section className="bg-[#0a0a0a] w-full">
 
-      {/* Background Texture (Subtle Noise) */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
+      {/* HERO SECTION */}
+      <div className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop"
+            alt="Secure Operations"
+            fill
+            priority
+            className="object-cover opacity-30 grayscale mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/50 via-[#0a0a0a]/80 to-[#0a0a0a]"></div>
+        </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-
-        {/* SECTION 1: THE HEADER (Split Layout) */}
-        <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8 border-b border-white/10 pb-12">
-          <div className="max-w-2xl animate-fade-in-up">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="h-[1px] w-12 bg-[#D4AF37]"></span>
-              <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs">
-                Uncompromising Standards
+        <div className="relative z-10 text-center px-6 max-w-4xl pt-24 pb-12">
+          <FadeIn direction="down" delay={0.2}>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#D4AF37]/30 rounded-full bg-[#D4AF37]/5 mb-6 backdrop-blur-md">
+              <Lock className="w-3 h-3 text-[#D4AF37]" />
+              <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-[10px]">
+                Client Confidentiality Guaranteed
               </span>
             </div>
-            <h2 className="font-serif text-4xl md:text-6xl font-bold leading-none text-white">
-              Reputation is <br />
-              <span className="text-gray-500">Everything.</span>
-            </h2>
-          </div>
+          </FadeIn>
+          
+          <FadeIn direction="up" delay={0.4}>
+            <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 tracking-tight">
+              Verified Intelligence.
+            </h1>
+          </FadeIn>
 
-          {/* Trust Stats - The "Legacy" Metrics */}
-          <div className="flex gap-12 text-left animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-white mb-1">100%</p>
-              <p className="text-xs text-gray-500 uppercase tracking-widest">Client Retention</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-white mb-1">Zero</p>
-              <p className="text-xs text-gray-500 uppercase tracking-widest">Security Breaches</p>
-            </div>
-          </div>
-        </div>
-
-        {/* SECTION 2: THE MASONRY GRID (Structure & Weight) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20">
-
-          {/* Large Featured Testimonial (Spans 8 cols) */}
-          <div className="lg:col-span-8 bg-white/5 border border-white/10 p-10 md:p-14 relative group animate-fade-in-up delay-100">
-            <Quote className="w-12 h-12 text-[#D4AF37] mb-8 opacity-80" />
-            <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-200 italic mb-10">
-              &quot;The level of discretion and professionalism demonstrated by the D Trinity team is unmatched. They have seamlessly integrated into our family&apos;s life, providing absolute peace of mind without ever being intrusive.&quot;
+          <FadeIn direction="up" delay={0.6}>
+            <p className="text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+              Our clients value discretion above all else. <br className="hidden md:block" />
+              Below are redacted statements from our operational logs, verifying our commitment to absolute security.
             </p>
-            <div className="flex items-center gap-4">
-              <div className="h-10 w-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-serif font-bold text-white">
-                H
-              </div>
-              <div>
-                <p className="font-bold text-white tracking-wider uppercase text-sm">Head of Family Office</p>
-                <p className="text-gray-500 text-xs tracking-wide uppercase">Kensington • Verified Client</p>
-              </div>
-            </div>
-            {/* Decorative Corner */}
-            <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-[#D4AF37]/30 rounded-tr-lg opacity-50"></div>
-          </div>
-
-          {/* Stacked Smaller Testimonials (Spans 4 cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
-
-            {/* Card 1 */}
-            <div className="flex-1 bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 animate-fade-in-up delay-200 hover:border-white/20 transition-colors">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />)}
-              </div>
-              <p className="font-serif text-lg text-gray-300 italic mb-6">
-                &quot;Their intelligence-led approach to our merger was evident. An indispensable asset to our executive suite.&quot;
-              </p>
-              <div>
-                <p className="font-bold text-white text-xs uppercase">CEO, FTSE 100 Company</p>
-                <p className="text-[#D4AF37] text-[10px] uppercase">Corporate Security</p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="flex-1 bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 animate-fade-in-up delay-300 hover:border-white/20 transition-colors">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />)}
-              </div>
-              <p className="font-serif text-lg text-gray-300 italic mb-6">
-                &quot;I have worked with many CP teams, but D Trinity is in a different league. Sharp, educated, and polite.&quot;
-              </p>
-              <div>
-                <p className="font-bold text-white text-xs uppercase">Diplomatic Envoy</p>
-                <p className="text-[#D4AF37] text-[10px] uppercase">Close Protection</p>
-              </div>
-            </div>
-
-          </div>
+          </FadeIn>
         </div>
-
-        {/* SECTION 3: THE ACCREDITATIONS BAR (The "Legacy" Strip) */}
-        <div className="border-t border-white/10 pt-10 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 animate-fade-in-up delay-500">
-          <span className="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Accreditations & Standards:</span>
-
-          {/* Placeholder Logos - Text for now, replace with Images later */}
-          <div className="flex items-center gap-12">
-            <div className="flex items-center gap-2 group">
-              <ShieldCheck className="w-8 h-8 text-gray-400 group-hover:text-white transition-colors" />
-              <span className="font-bold text-gray-400 text-sm group-hover:text-white">SIA Licensed</span>
-            </div>
-            <div className="flex items-center gap-2 group">
-              <Award className="w-8 h-8 text-gray-400 group-hover:text-white transition-colors" />
-              <span className="font-bold text-gray-400 text-sm group-hover:text-white">ISO 9001</span>
-            </div>
-            <div className="flex items-center gap-2 group">
-              <Lock className="w-8 h-8 text-gray-400 group-hover:text-white transition-colors" />
-              <span className="font-bold text-gray-400 text-sm group-hover:text-white">GDPR Compliant</span>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      {/* REVIEWS GRID */}
+      <section className="py-24 px-6 relative">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+          {reviews.map((review, i) => (
+            <FadeIn key={i} direction="up" delay={0.2 + (i * 0.1)}>
+              <div className="h-full bg-white/5 p-10 border border-white/10 hover:border-[#D4AF37]/50 transition-colors duration-500 group relative flex flex-col justify-between">
+                
+                {/* Decorative Quote Icon */}
+                <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5 group-hover:text-[#D4AF37]/10 transition-colors duration-500" />
+
+                <div>
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex gap-1">
+                      {[1, 2, 3, 4, 5].map(star => (
+                        <Star key={star} className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                      ))}
+                    </div>
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest bg-black/50 px-2 py-1 rounded-sm">
+                      Verified
+                    </span>
+                  </div>
+
+                  <p className="text-gray-300 italic leading-relaxed mb-8 font-serif text-lg">
+                    "{review.text}"
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-white/10">
+                  <p className="text-sm font-bold text-white uppercase tracking-wider">{review.name}</p>
+                  <p className="text-xs text-[#D4AF37] uppercase tracking-widest mt-1">{review.role}</p>
+                  <div className="flex items-center justify-between mt-4">
+                    <p className="text-[10px] text-gray-500 uppercase tracking-widest">{review.location}</p>
+                    <span className="inline-block px-2 py-1 bg-white/5 border border-white/10 text-[9px] font-bold text-gray-400 uppercase tracking-widest rounded-sm">
+                      {review.tag}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      {/* TRUST BANNER CTA */}
+      <section className="relative py-24 border-t border-white/10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#D4AF37]/5"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <FadeIn direction="up" delay={0.2}>
+            <ShieldCheck className="w-12 h-12 mx-auto mb-6 text-[#D4AF37]" />
+            <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">Privacy is our Protocol.</h2>
+            <p className="text-gray-400 text-lg mx-auto mb-10 leading-relaxed font-light">
+              We never disclose client identities, locations, or operational details without express written consent. Your business remains strictly confidential.
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center px-12 py-5 bg-[#D4AF37] text-gray-900 font-extrabold uppercase tracking-[0.2em] text-xs hover:bg-[#B5952F] transition-all shadow-xl hover:shadow-[#D4AF37]/20 rounded-sm"
+            >
+              Secure Your Consultation
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
     </section>
   );
 }

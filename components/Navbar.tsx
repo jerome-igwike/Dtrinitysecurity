@@ -39,7 +39,10 @@ export default function Navbar() {
         { name: "Family Office", href: "/services/family-office" },
         { name: "Private Investigation", href: "/services/investigation" },
         { name: "Surveillance", href: "/services/surveillance" },
-        { name: "Security Chauffeurs", href: "/services/chauffeurs" }
+        { name: "Event Security", href: "/services/events" },
+        { name: "Security Chauffeurs", href: "/services/chauffeurs" },
+        { name: "Asset Protection", href: "/services/assets" },
+        { name: "Secure Cleaning & Facilities", href: "/services/facility-management" }
       ]
     },
     {

@@ -52,21 +52,50 @@ export async function POST(req: Request) {
       },
     });
 
-    const DESTINATION_EMAIL = process.env.SMTP_TO_EMAIL || 'info@dtrinitysecurity.co';
-
     await transporter.sendMail({
-      from: `"D Trinity Contact" <${process.env.SMTP_USER}>`,
-      to: DESTINATION_EMAIL,
+      from: process.env.SMTP_FROM_STRING,
+      to: process.env.SMTP_BOOKINGS_EMAIL,
       replyTo: email,
-      subject: `[WEBSITE INQUIRY] ${subject.toUpperCase()} - ${name}`,
+      subject: `New Inquiry: ${subject} - ${name}`,
       html: `
-        <h3>New Inquiry via Website</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <hr />
-        <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
+        <div style="font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; max-width: 600px; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background-color: #ffffff; margin: 0 auto;">
+          <div style="background-color: #f8f9fa; border-bottom: 3px solid #D4AF37; padding: 25px; text-align: left;">
+            <h2 style="color: #111827; font-size: 20px; margin: 0; letter-spacing: 1px; text-transform: uppercase;">D'Trinity Operations</h2>
+            <p style="color: #6b7280; font-size: 12px; margin: 5px 0 0 0; text-transform: uppercase; font-weight: bold;">New Inquiry Dossier</p>
+          </div>
+          
+          <div style="padding: 30px 25px;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; width: 100px;"><strong>Name</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-weight: 500;">${name}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280;"><strong>Email</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-weight: 500;">${email}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280;"><strong>Phone</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-weight: 500;">${phone || 'Not Provided'}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280;"><strong>Subject</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-weight: 500;">${subject}</td>
+              </tr>
+            </table>
+
+            <div style="margin-top: 30px;">
+              <p style="color: #6b7280; font-size: 13px; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #f3f4f6; padding-bottom: 8px;">Direct Message</p>
+              <p style="color: #374151; line-height: 1.6; font-size: 15px; background: #f9fafb; padding: 15px; border-radius: 4px; border-left: 3px solid #D4AF37;">
+                ${message.replace(/\n/g, '<br>')}
+              </p>
+            </div>
+          </div>
+
+          <div style="background-color: #f3f4f6; padding: 20px; text-align: center; color: #9ca3af; font-size: 11px; border-top: 1px solid #eaeaea;">
+            This communication was routed securely via the D'Trinity interface.
+          </div>
+        </div>
       `,
     });
 

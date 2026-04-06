@@ -42,6 +42,7 @@ export default function Footer() {
                      <li><Link href="/services/family-office" className="hover:text-[#D4AF37] transition-colors">Family Office</Link></li>
                      <li><Link href="/services/investigation" className="hover:text-[#D4AF37] transition-colors">Private Investigation</Link></li>
                      <li><Link href="/services/surveillance" className="hover:text-[#D4AF37] transition-colors">Surveillance</Link></li>
+                     <li><Link href="/services/facility-management" className="hover:text-[#D4AF37] transition-colors">Secure Cleaning & Facilities</Link></li>
                      <li><Link href="/recruitment" className="hover:text-white transition-colors text-[#D4AF37]">Operative Recruitment</Link></li>
                   </ul>
                </div>
@@ -74,7 +75,7 @@ export default function Footer() {
                      </li>
                      <li className="flex items-center gap-4">
                         <Phone className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                        <span>+44 (0) 20 7000 0000</span>
+                        <span>+44 (0) 20 3648 4525</span>
                      </li>
                      <li className="flex items-center gap-4">
                         <Mail className="w-5 h-5 text-[#D4AF37] shrink-0" />
